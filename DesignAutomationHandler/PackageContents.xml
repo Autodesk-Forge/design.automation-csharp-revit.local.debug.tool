@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ApplicationPackage>
+  <Components Description="DesignAutomationHandler">
+    <RuntimeRequirements OS="Win64"
+                         Platform="Revit"
+                         SeriesMin="R2018"
+                         SeriesMax="R2018" />
+    <ComponentEntry AppName="DesignAutomationHandler"
+                    Version="1.0.0"
+                    ModuleName="./Contents/DesignAutomationHandler.addin"
+                    AppDescription="Calls the DesignAutomationReady event to be used locally."
+                    LoadOnCommandInvocation="False"
+                    LoadOnRevitStartup="True" />
+  </Components>
+</ApplicationPackage>
