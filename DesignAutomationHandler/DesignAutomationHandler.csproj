@@ -70,7 +70,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)$(TargetFileName) /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>
