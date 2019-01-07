@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 
+
 using Autodesk.Revit.ApplicationServices;
+using Autodesk;
 using Autodesk.Revit.DB;
 using DesignAutomationFramework;
+using Autodesk.Revit.UI;
+
 
 namespace DesignAutomationHandler
 {
@@ -27,8 +31,15 @@ namespace DesignAutomationHandler
       public void HandleApplicationInitializedEvent(object sender, Autodesk.Revit.DB.Events.ApplicationInitializedEventArgs e)
       {
          Application app = sender as Application;
+         // Configure open file dialog box
+         FileOpenDialog dialog = new FileOpenDialog("Revit Files(*.rvt) | *.rvt");
+         dialog.Title = "Input Revit File";
+         // Show open file dialog box
+         dialog.Show();
+
+         string filename = ModelPathUtils.ConvertModelPathToUserVisiblePath(dialog.GetSelectedModelPath());
          // when application ready is called, set design automation ready.
-         bool designAutomationResult = DesignAutomationBridge.SetDesignAutomationReady(app, "/path/goes/here"); // TODO take user input for app.
+         bool designAutomationResult = DesignAutomationBridge.SetDesignAutomationReady(app, filename);
       }
    }
 }
