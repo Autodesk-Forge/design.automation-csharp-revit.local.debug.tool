@@ -33,7 +33,7 @@ namespace DesignAutomationHandler
          Application app = sender as Application;
          // Configure open file dialog box
          FileOpenDialog dialog = new FileOpenDialog("Revit Files(*.rvt) | *.rvt");
-         dialog.Title = "Input Revit File";
+         dialog.Title = "Main Model Path";
          // Show open file dialog box
          dialog.Show();
 
