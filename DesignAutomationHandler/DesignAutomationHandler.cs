@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-
-
-using Autodesk.Revit.ApplicationServices;
-using Autodesk;
+﻿using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
 using DesignAutomationFramework;
 using Autodesk.Revit.UI;
-
+using System.IO;
 
 namespace DesignAutomationHandler
 {
@@ -32,6 +26,22 @@ namespace DesignAutomationHandler
       {
          Application app = sender as Application;
          // Configure open file dialog box
+
+
+         // First check to see how many DLL's are in the 'DAHandler' folder.
+
+         string folderPath = app.AllUsersAddinsLocation + "\\DesignAutomationHandler";
+         DirectoryInfo d = new DirectoryInfo(folderPath);
+         FileInfo[] dlls = d.GetFiles("*.dll");
+
+         // if it's anything other than 1, don't run.
+         // there's either no DLL (so no app to run)
+         // or there's more than one app (which we don't support)
+         if(dlls.Length != 1)
+         {
+            return;
+         }
+
          FileOpenDialog dialog = new FileOpenDialog("Revit Files(*.rvt) | *.rvt");
          dialog.Title = "Main Model Path";
          // Show open file dialog box
