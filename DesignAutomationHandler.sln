@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignAutomationHandler2019
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignAutomationHandler2018", "DesignAutomationHandler2018\DesignAutomationHandler2018.csproj", "{EFB263DA-A3C0-4789-9D73-F74351DCC26D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignAutomationHandler2020", "DesignAutomationHandler2020\DesignAutomationHandler2020.csproj", "{A642E951-16DB-468F-BCEF-EF7408FAA47D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EFB263DA-A3C0-4789-9D73-F74351DCC26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFB263DA-A3C0-4789-9D73-F74351DCC26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFB263DA-A3C0-4789-9D73-F74351DCC26D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A642E951-16DB-468F-BCEF-EF7408FAA47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A642E951-16DB-468F-BCEF-EF7408FAA47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A642E951-16DB-468F-BCEF-EF7408FAA47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A642E951-16DB-468F-BCEF-EF7408FAA47D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
