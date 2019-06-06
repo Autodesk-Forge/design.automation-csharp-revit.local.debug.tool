@@ -1,8 +1,11 @@
 ﻿using Autodesk.Revit.DB;
 using DesignAutomationFramework;
+using System.Collections.Generic;
 using Autodesk.Revit.UI;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace DesignAutomationHandler
 {
@@ -13,6 +16,36 @@ namespace DesignAutomationHandler
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
             var app = commandData.Application.Application;
+            string[] files = Directory.GetFiles(app.AllUsersAddinsLocation, "*.addin");
+            foreach (string file in files)
+            {
+               XElement addin = XElement.Load(file);
+               IEnumerable<XElement> childList = from el in addin.Elements() select el;
+               foreach (XElement e in childList)
+               {
+                  try
+                  {
+                     System.Reflection.Assembly a = System.Reflection.Assembly.LoadFile(e.Element("Assembly").Value);
+                     bool designAutomationBridge = false;
+                     bool revitAPIUI = false;
+                     foreach (System.Reflection.AssemblyName an in a.GetReferencedAssemblies())
+                     {
+                        string assemblyName = an.Name;
+                        if (assemblyName == "DesignAutomationBridge")
+                           designAutomationBridge = true;
+                        else if (assemblyName == "RevitAPIUI")
+                           revitAPIUI = true;
+                     }
+                     if (designAutomationBridge && revitAPIUI)
+                        MessageBox.Show($"RevitAPIUI detected in DA Plugin: {e.Element("Assembly").Value}", "DesignAutomationHandler");
+                  }
+                  catch
+                  {
+                     // in case we can't open the dll for some reason, just continue
+                     continue;
+                  }
+               }
+            }
             var doc = commandData.Application.ActiveUIDocument?.Document;
             HandleDAApplication(app, doc);
             return Result.Succeeded;
