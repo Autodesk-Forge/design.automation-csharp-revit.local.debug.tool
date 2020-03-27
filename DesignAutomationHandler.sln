@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignAutomationHandler2019", "DesignAutomationHandler2019\DesignAutomationHandler2019.csproj", "{1A041F1A-AFB9-4988-92E1-477A862E505A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignAutomationHandler2018", "DesignAutomationHandler2018\DesignAutomationHandler2018.csproj", "{EFB263DA-A3C0-4789-9D73-F74351DCC26D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignAutomationHandler2020", "DesignAutomationHandler2020\DesignAutomationHandler2020.csproj", "{A642E951-16DB-468F-BCEF-EF7408FAA47D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignAutomationHandler2021", "DesignAutomationHandler2021\DesignAutomationHandler2021.csproj", "{40965980-8504-4481-878F-F26C47C0479C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{A642E951-16DB-468F-BCEF-EF7408FAA47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A642E951-16DB-468F-BCEF-EF7408FAA47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A642E951-16DB-468F-BCEF-EF7408FAA47D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40965980-8504-4481-878F-F26C47C0479C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40965980-8504-4481-878F-F26C47C0479C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40965980-8504-4481-878F-F26C47C0479C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40965980-8504-4481-878F-F26C47C0479C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

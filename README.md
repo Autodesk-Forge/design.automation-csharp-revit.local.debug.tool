@@ -18,7 +18,7 @@ See [step-by-step video](https://www.youtube.com/watch?v=i0LJ9JOpKMQ)
 
 1. **Forge Account**: Learn how to create a Forge Account, activate subscription and create an app at [this tutorial](http://learnforge.autodesk.io/#/account/). 
 2. **Visual Studio**: [2017 or newer](https://visualstudio.microsoft.com/)
-3. **.NET Core** basic knowledge with C#
+3. **.NET Framework** basic knowledge with C#
 4. **Revit** 2019: required to compile changes into the plugin
 
 ## Compile and Load on Revit
