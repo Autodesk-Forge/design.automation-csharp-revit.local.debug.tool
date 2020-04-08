@@ -1,8 +1,8 @@
 # Design Automation for Revit - Local debug tool 
 
 ![Platforms](https://img.shields.io/badge/Plugins-Windows-lightgray.svg)
-![.NET](https://img.shields.io/badge/.NET%20Framework-4.7-blue.svg)
-[![Revit](https://img.shields.io/badge/Revit-2018|2019|2020-lightblue.svg)](http://developer.autodesk.com/)
+![.NET](https://img.shields.io/badge/.NET%20Framework-4.8-blue.svg)
+[![Revit](https://img.shields.io/badge/Revit-2018|2019|2020|2021-lightblue.svg)](http://developer.autodesk.com/)
 
 # Description
 
@@ -17,16 +17,16 @@ See [step-by-step video](https://www.youtube.com/watch?v=i0LJ9JOpKMQ)
 ## Prerequisites
 
 1. **Forge Account**: Learn how to create a Forge Account, activate subscription and create an app at [this tutorial](http://learnforge.autodesk.io/#/account/). 
-2. **Visual Studio**: [2017 or newer](https://visualstudio.microsoft.com/)
-3. **.NET Core** basic knowledge with C#
+2. **Visual Studio**: [2019 or newer](https://visualstudio.microsoft.com/)
+3. **.NET Framework** basic knowledge with C#
 4. **Revit** 2019: required to compile changes into the plugin
 
 ## Compile and Load on Revit
 
-1. Build the solution `DesignAutomationHandler`, compiling DesignAutomationHandler for Revit 2018.3 (`DesignAutomationHandler2018`), Revit 2019.2 (`DesignAutomationHandler2019`) and Revit 2020.0 (`DesignAutomationHandler2020`)
-> Design Automation for Revit currently only supports Revit 2018, 2019 and 2020.
+1. Build the solution `DesignAutomationHandler`, compiling DesignAutomationHandler for Revit 2018.3 (`DesignAutomationHandler2018`), Revit 2019.2 (`DesignAutomationHandler2019`), Revit 2020.0 (`DesignAutomationHandler2020`) and Revit 2021.0 (`DesignAutomationHandler2021`)
+> Design Automation for Revit currently only supports Revit 2018, 2019, 2020, and 2021.
 
-2. The `DesignAutomationHandler.addin` should be copied to the "Addins" folder (`C:\ProgramData\Autodesk\Revit\Addins\XXXX\`), see Post-Build event. Note `XXXX` is the Revit version(e.g. 2018, 2019, 2020) to run against.
+2. The `DesignAutomationHandler.addin` should be copied to the "Addins" folder (`C:\ProgramData\Autodesk\Revit\Addins\XXXX\`), see Post-Build event. Note `XXXX` is the Revit version(e.g. 2018, 2019, 2020, 2021) to run against.
 
 3. Place the `.addin` of your Design Automation for Revit plugin in the same folder(`C:\ProgramData\Autodesk\Revit\Addins\XXXX\`) as above. 
 
