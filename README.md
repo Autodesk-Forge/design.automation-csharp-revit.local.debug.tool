@@ -1,7 +1,7 @@
 # Design Automation for Revit - Local debug tool 
 
 ![Platforms](https://img.shields.io/badge/Plugins-Windows-lightgray.svg)
-![.NET](https://img.shields.io/badge/.NET%20Framework-4.7-blue.svg)
+![.NET](https://img.shields.io/badge/.NET%20Framework-4.8-blue.svg)
 [![Revit](https://img.shields.io/badge/Revit-2018|2019|2020|2021-lightblue.svg)](http://developer.autodesk.com/)
 
 # Description
@@ -17,7 +17,7 @@ See [step-by-step video](https://www.youtube.com/watch?v=i0LJ9JOpKMQ)
 ## Prerequisites
 
 1. **Forge Account**: Learn how to create a Forge Account, activate subscription and create an app at [this tutorial](http://learnforge.autodesk.io/#/account/). 
-2. **Visual Studio**: [2017 or newer](https://visualstudio.microsoft.com/)
+2. **Visual Studio**: [2019 or newer](https://visualstudio.microsoft.com/)
 3. **.NET Framework** basic knowledge with C#
 4. **Revit** 2019: required to compile changes into the plugin
 
