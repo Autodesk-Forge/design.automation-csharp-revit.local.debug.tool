@@ -6,7 +6,7 @@
 
 # Description
 
-DesignAutomationHandler is a Revit addin that allows users to run/debug their Design Automation for Revit application locally with desktop Revit. 
+DesignAutomationHandler is a Revit addin that allows users to run and debug their Design Automation for Revit application locally using desktop Revit. 
 
 # Demonstration
 
@@ -16,41 +16,43 @@ See [step-by-step video](https://www.youtube.com/watch?v=i0LJ9JOpKMQ)
 
 ## Prerequisites
 
-1. **Forge Account**: Learn how to create a Forge Account, activate subscription and create an app at [this tutorial](http://learnforge.autodesk.io/#/account/). 
+1. **Forge Account**: Learn how to create a Forge Account, activate your subscription, and create an app at [this tutorial](http://learnforge.autodesk.io/#/account/). 
 2. **Visual Studio**: [2019 or newer](https://visualstudio.microsoft.com/)
 3. **.NET Framework** basic knowledge with C#
-4. **Revit** 2019: required to compile changes into the plugin
+4. **Revit** 2019: required for compiling plugin changes
 
 ## Compile and Load on Revit
 
-1. Build the solution `DesignAutomationHandler`, compiling DesignAutomationHandler for Revit 2018.3 (`DesignAutomationHandler2018`), Revit 2019.2 (`DesignAutomationHandler2019`), Revit 2020.0 (`DesignAutomationHandler2020`) and Revit 2021.0 (`DesignAutomationHandler2021`)
-> Design Automation for Revit currently only supports Revit 2018, 2019, 2020, and 2021.
+1. Build the solution `DesignAutomationHandler`, compiling DesignAutomationHandler for Revit 2018 (`DesignAutomationHandler2018`), Revit 2019 (`DesignAutomationHandler2019`), Revit 2020 (`DesignAutomationHandler2020`) and Revit 2021 (`DesignAutomationHandler2021`)
+> Design Automation for Revit currently supports Revit 2018, 2019, 2020, and 2021.
 
-2. The `DesignAutomationHandler.addin` should be copied to the "Addins" folder (`C:\ProgramData\Autodesk\Revit\Addins\XXXX\`), see Post-Build event. Note `XXXX` is the Revit version(e.g. 2018, 2019, 2020, 2021) to run against.
+2. Copy/paste the `DesignAutomationHandler.addin` into the "Addins" folder `C:\ProgramData\Autodesk\Revit\Addins\XXXX\`, where `XXXX` is the Revit version (e.g. 2018, 2019, 2020, 2021) you intend to run.
 
-3. Place the `.addin` of your Design Automation for Revit plugin in the same folder(`C:\ProgramData\Autodesk\Revit\Addins\XXXX\`) as above. 
+3. Copy/paste the `.addin` file of your Design Automation for Revit plugin into the same folder `C:\ProgramData\Autodesk\Revit\Addins\XXXX\`. 
 
-> DesignAutomationHandler does not expect to handle more than one addin for local testing/debugging.
+> DesignAutomationHandler doesn't support local testing/debugging of more than one addin at a time.
 
-> To allow Revit loads your `.addin` correctly, `DesignAutomationBridge.dll` should be in the same folder as your addin's dll is.
+> Revit needs the `DesignAutomationBridge.dll` to be in the same folder as your addin's dlls.
 
 ## Usage
 
 Starting Revit:
 
-- If your addin needs to run on an input Revit model file, then open it in Revit or specify with startup argument
+- If your addin requires an input Revit model at startup, then open the file in Revit before running the addin or specify the file using a startup argument.
 
-> If you have json parameter defined to run the `WorkItem` in Design Automation, you can save json payload as a json file where your input file is at.
+> If you have json parameter defined to run the `WorkItem` in Design Automation, you can save the json payload as a json file in the same folder as your input Revit file.
 
-> For example, `{"walls": false,"floors": true,"doors": true,"windows": true}` is saved as `CountItParams.json` in the same folder where my input file locates. `CountItParams` is the name of parameter I define in the `Activity` for Design Automation. 
+> For example: if `CountItParams` is the name of the parameter defined in the your Design Automation `Activity`, then you should create a file `CountItParams.json` with contents `{"walls": false,"floors": true,"doors": true,"windows": true}` and save it to the folder which contains your input Revit model.  
 
-- Go to `Add-Ins` -> `External Tools`-> Click `DesignAutomationHandler`, your addin will get excuted! A dialog will pop up to tell the running result (if the runing succeeds the dialog will indicate where to find the output(s), it is supposed to be the folder where your input file is at) 
+- In the Revit ribbon, navigate to the `Add-Ins` tab, then click `External Tools`, and click the `DesignAutomationHandler` command. Your addin will by executed! A dialog will pop-up to report the execution result. If the execution was successful, the dialog will indicate where you can find the output(s). They go to the folder which contained your input files. 
 
-- If you don't have input file to run on, after starting Revit, do 2 directly. If you have json parameter defined to run the `WorkItem` in Design Automation, there will be a dialog to instruct where to put the json file.  
+- If your plugin doesn't require any input files, start Revit and run the `DesignAutomationHandler` command without any additional setup. If you have json parameter defined to run the `WorkItem` in Design Automation, a dialog will instruct you where to put your json file.  
 
-> You can rerun the same addin without restarting Revit. But to run another addin, you need to following the step above to set it up.  
+> You can rerun the same addin without restarting Revit. 
 
-> Currently, the DesignAutomationHandler does not support multiple input files yet, as Design Automation does.
+> To run different addin, repeat the setup steps above.
+
+> Currently, the DesignAutomationHandler doesn't support multiple input files.  (This feature is supported by Design Automation on Forge.)
 
 # Further Reading
 
@@ -73,4 +75,4 @@ Please see the [LICENSE](LICENSE) file for full details.
 
 ## Written by
 
-Lijuan Zhu, Ashwin Shivashankar.
+Lijuan Zhu and Ashwin Shivashankar
