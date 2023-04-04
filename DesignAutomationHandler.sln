@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29728.190
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignAutomationHandler2019", "DesignAutomationHandler2019\DesignAutomationHandler2019.csproj", "{1A041F1A-AFB9-4988-92E1-477A862E505A}"
 EndProject
@@ -13,7 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignAutomationHandler2021
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignAutomationHandler2022", "DesignAutomationHandler2022\DesignAutomationHandler2022.csproj", "{8C1B6869-E464-4252-9E9E-068E43553A7A}"
 EndProject
-Project("{849AABA4-EE35-4619-A264-3C26FB24371F}") = "DesignAutomationHandler2023", "DesignAutomationHandler2023\DesignAutomationHandler2023.csproj", "{D995EDC7-E67B-41D8-A730-1D1FD4792239}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignAutomationHandler2023", "DesignAutomationHandler2023\DesignAutomationHandler2023.csproj", "{D995EDC7-E67B-41D8-A730-1D1FD4792239}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignAutomationHandler2024", "DesignAutomationHandler2024\DesignAutomationHandler2024.csproj", "{E9E338EF-4843-46CC-BE8B-DF9136A5A1A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D995EDC7-E67B-41D8-A730-1D1FD4792239}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D995EDC7-E67B-41D8-A730-1D1FD4792239}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D995EDC7-E67B-41D8-A730-1D1FD4792239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9E338EF-4843-46CC-BE8B-DF9136A5A1A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9E338EF-4843-46CC-BE8B-DF9136A5A1A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9E338EF-4843-46CC-BE8B-DF9136A5A1A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9E338EF-4843-46CC-BE8B-DF9136A5A1A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
