@@ -26,6 +26,7 @@ namespace DesignAutomationHandler
                }
                catch
                {
+                  MessageBox.Show($"Malformed XML in addin: {file}", "DesignAutomationHandler");
                   // if the XML is malformed or not parse-able, just continue
                   continue;
                }
