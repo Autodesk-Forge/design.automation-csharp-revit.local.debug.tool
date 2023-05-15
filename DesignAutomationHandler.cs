@@ -19,7 +19,16 @@ namespace DesignAutomationHandler
             string[] files = Directory.GetFiles(app.AllUsersAddinsLocation, "*.addin");
             foreach (string file in files)
             {
-               XElement addin = XElement.Load(file);
+               XElement addin;
+               try
+               {
+                  addin = XElement.Load(file);
+               }
+               catch
+               {
+                  // if the XML is malformed or not parse-able, just continue
+                  continue;
+               }
                IEnumerable<XElement> childList = from el in addin.Elements() select el;
                foreach (XElement e in childList)
                {
